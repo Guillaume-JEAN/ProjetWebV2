@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import background from "./background.jpg";
 
 import AddCharacter from "./components/add-Character.component";
 import Character from "./components/character.component";
@@ -10,7 +11,9 @@ import CharactersList from "./components/Characters-list.component";
 class App extends Component {
   render() {
     return (
-      <div>
+      <div style={{
+        backgroundImage: `url(${background})`
+      }}>
 
         <nav className="navbar navbar-expand navbar-dark bg-primary " >
           <Link to={"/Characters"} className="navbar-brand">
@@ -27,19 +30,26 @@ class App extends Component {
                 Add Character
               </Link>
             </li>
+
           </div>
         </nav>
 
 
-        <div className="container mt-3">
+        <div className="container mt-3" >
           <Routes>
             <Route path="/" element={<CharactersList/>} />
             <Route path="/Characters" element={<CharactersList/>} />
             <Route path="/add" element={<AddCharacter/>} />
             <Route path="/Characters/:id" element={<Character/>} />
+
           </Routes>
         </div>
-      </div>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        </div>
     );
   }
 }

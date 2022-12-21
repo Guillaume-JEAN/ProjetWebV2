@@ -87,11 +87,12 @@ export default class AddCharacter extends Component {
                 value={this.state.Name}
                 onChange={this.onChangeName}
                 name="Name"
+                placeholder="enter your character's name"
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="description">Description</label>
+              <label htmlFor=" description ">Description</label>
               <input
                 type="text"
                 className="form-control"
@@ -100,6 +101,7 @@ export default class AddCharacter extends Component {
                 value={this.state.description}
                 onChange={this.onChangeDescription}
                 name="description"
+                placeholder="enter your character's description"
               />
             </div>
 
