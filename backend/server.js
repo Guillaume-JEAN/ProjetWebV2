@@ -29,11 +29,6 @@ db.mongoose
     process.exit();
   });
 
-// simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
-});
-
 require("./app/routes/character.routes")(app);
 
 // set port, listen for requests

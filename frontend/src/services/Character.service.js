@@ -25,8 +25,8 @@ class CharacterDataService {
     return http.delete(`/Characters`);
   }
 
-  findByTitle(title) {
-    return http.get(`/Characters?title=${title}`);
+  findByName(Name) {
+    return http.get(`/Characters?title=${Name}`);
   }
 }
 

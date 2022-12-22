@@ -7,8 +7,12 @@ import background from "./background.jpg";
 import AddCharacter from "./components/add-Character.component";
 import Character from "./components/character.component";
 import CharactersList from "./components/Characters-list.component";
+import GetQuote from "./components/get-Quote.components";
 
 class App extends Component {
+
+
+
   render() {
     return (
       <div style={{
@@ -30,6 +34,11 @@ class App extends Component {
                 Add Character
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to={"/quote"} className="nav-link">
+                Quotes
+              </Link>
+            </li>
 
           </div>
         </nav>
@@ -40,6 +49,7 @@ class App extends Component {
             <Route path="/" element={<CharactersList/>} />
             <Route path="/Characters" element={<CharactersList/>} />
             <Route path="/add" element={<AddCharacter/>} />
+            <Route path="/quote" element={<GetQuote/>} />
             <Route path="/Characters/:id" element={<Character/>} />
 
           </Routes>
